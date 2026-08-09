@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b120c">
+<meta name="description" content="Lanchonete da Tia Dina — coxinhas, lanchão, arroz com charque, maniçoba, caldos, sucos e bebidas geladas, tudo feito no dia. Avenida Sol Poente, esquina com Avenida Amazonas, Bairro Rio Verde, Parauapebas–PA. Peça no WhatsApp: (91) 98041-3076.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e0492c'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial,sans-serif' font-size='36' font-weight='900' text-anchor='middle' fill='%23f4e7cd'%3ED%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lanchonete da Tia Dina · Salgados e comida caseira no Rio Verde">
+<meta property="og:description" content="Coxinha saindo quente, lanchão caprichado e arroz com charque. Tudo feito no dia, com preço de bairro. Peça no WhatsApp: (91) 98041-3076.">
+<meta property="og:image" content="imagens/coxinha.jpg">
+<meta property="og:image:alt" content="Coxinhas quentinhas da Lanchonete da Tia Dina">
+<meta name="twitter:card" content="summary_large_image">
+<title>Lanchonete da Tia Dina · Salgados e comida caseira no Rio Verde · Parauapebas–PA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lanchonete_da_tia.css">
+
+</head>
+<body>
+
+<a class="skip" href="#cardapio">Pular para o cardápio</a>
+
+<!-- ═══ PROGRESSO DE ROLAGEM ═══ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ═══ TOPBAR ═══ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Lanchonete da Tia Dina — início">
+      <span class="logo-script">lanchonete</span>
+      <span class="logo-name">DA TIA <em>DINA</em></span>
+    </a>
+    <nav class="topnav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sobre">História</a>
+      <a href="#pedidos">Como pedir</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <a class="btn btn-wa" data-wa href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Pedir no zap</a>
+    <button class="hamb" id="hamb" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ MENU MÓVEL ═══ -->
+<div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Menu móvel">
+  <a href="#cardapio">Cardápio</a>
+  <a href="#sobre">História</a>
+  <a href="#pedidos">Como pedir</a>
+  <a href="#onde">Onde estamos</a>
+  <a class="btn btn-wa" data-wa href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Pedir no zap</a>
+</nav>
+
+<!-- ═══ FAIXA DE STATUS (tempo real) ═══ -->
+<div class="status-strip" id="statusStrip" role="status">
+  <div class="wrap"><span class="dot" aria-hidden="true"></span><span id="statusText">Verificando horário…</span></div>
+</div>
+
+<main id="topo">
+
+<!-- ═══ ABERTURA ═══ -->
+<section class="hero" aria-label="Abertura">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-over">Rio Verde · Parauapebas–PA · desde 2023</span>
+      <h1>
+        <span class="t1">Lanchonete</span>
+        <span class="t2">Da Tia Dina</span>
+      </h1>
+      <span class="hero-hand">artesanal de verdade, feito no dia pra você!
+        <svg viewBox="0 0 120 30" aria-hidden="true"><path d="M4 22 C 30 6, 55 26, 82 10 S 112 14, 116 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+      </span>
+      <p class="lead">Coxinha saindo quente, lanchão caprichado e arroz com charque que abraça. Tudo feito no dia, com preço de bairro — seg a qui até 22h, sábado até 17h.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-mustard" href="#cardapio">Ver o cardápio</a>
+        <a class="btn btn-wa" data-wa href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      </div>
+      <p class="hero-addr"><strong>Avenida Sol Poente</strong>, esquina com a Av. Amazonas — Bairro Rio Verde, Parauapebas/PA</p>
+    </div>
+
+    <div class="hero-photo reveal">
+      <span class="tape tl" aria-hidden="true"></span>
+      <span class="tape br" aria-hidden="true"></span>
+      <div class="frame photo">
+        <img src="imagens/coxinha.jpg" alt="Coxinhas quentinhas da Lanchonete da Tia Dina, o mais pedido da casa" width="800" height="1000" fetchpriority="high">
+      </div>
+      <div class="price-tag">
+        <small>o mais pedido · Coxinha</small>
+        <strong>R$ 5,00</strong>
+      </div>
+      <span class="stamp s1" aria-hidden="true">feito no dia</span>
+      <span class="stamp s2" aria-hidden="true">tempero da casa</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE 1 ═══ -->
+<div class="marquee marquee-red" aria-hidden="true">
+  <div class="track">
+    <span>COXINHA ★ LANCHÃO ★ ARROZ COM CHARQUE ★ MANIÇOBA ★ MINI PIZZA ★ CALDOS ★ SUCOS ★ FEITO NO DIA ★ COXINHA ★ LANCHÃO ★ ARROZ COM CHARQUE ★ MANIÇOBA ★ MINI PIZZA ★ CALDOS ★ SUCOS ★ FEITO NO DIA ★</span>
+    <span>COXINHA ★ LANCHÃO ★ ARROZ COM CHARQUE ★ MANIÇOBA ★ MINI PIZZA ★ CALDOS ★ SUCOS ★ FEITO NO DIA ★ COXINHA ★ LANCHÃO ★ ARROZ COM CHARQUE ★ MANIÇOBA ★ MINI PIZZA ★ CALDOS ★ SUCOS ★ FEITO NO DIA ★</span>
+  </div>
+</div>
+
+<!-- ═══ CARDÁPIO ═══ -->
+<section id="cardapio" class="on-cream">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">o coração da casa</span>
+      <h2>Cardápio da Tia Dina</h2>
+      <div class="rule"></div>
+      <p class="note">Tudo preparado no dia, com tempero da casa e preço de bairro. Preços de agosto/2026.</p>
+    </div>
+
+    <!-- Destaque da semana (rotativo por dia) -->
+    <article class="destaque reveal" aria-label="Destaque do dia">
+      <div class="destaque-photo">
+        <img id="destaqueImg" src="imagens/maniçoba.jpg" alt="Panela de maniçoba fumegando, servida com arroz e farofa" width="1200" height="675">
+      </div>
+      <div class="destaque-body">
+        <span class="script" id="destaqueScript">destaque da semana</span>
+        <h3 id="destaqueTitulo">Sábado da Maniçoba 🌿</h3>
+        <p id="destaqueTxt">Maniçoba feita na panela grande, do jeito paraense, com farinha d’água, arroz e pimenta à parte. Prato grande de R$ 25 por R$ 22 — só no sábado, enquanto durar a panela (sábado fecha às 17h!).</p>
+        <div class="destaque-prices" id="destaquePrices">
+          <span class="old">de R$ 25,00</span>
+          <span class="new">R$ 22,00</span>
+        </div>
+        <span class="stamp" id="destaqueStamp" aria-hidden="true">só no sábado</span>
+      </div>
+    </article>
+
+    <!-- Filtros -->
+      <div class="filters" role="group" aria-label="Filtrar cardápio por categoria">
+      <button data-filter="todos" aria-pressed="true">Tudo</button>
+      <button data-filter="salgados" aria-pressed="false">Salgados</button>
+      <button data-filter="pratos" aria-pressed="false">Pratos da Tia</button>
+      <button data-filter="caldos" aria-pressed="false">Caldos &amp; Mingau</button>
+      <button data-filter="bebidas" aria-pressed="false">Bebidas</button>
+      <button data-filter="doces" aria-pressed="false">Doces &amp; Leves</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+    <p class="menu-note">→ escolhe aqui, manda no zap e pronto. sem aplicativo, sem taxa escondida. 😉</p>
+  </div>
+</section>
+
+<!-- ═══ SOBRE ═══ -->
+<section id="sobre" class="about">
+  <div class="wrap">
+    <div class="collage reveal">
+      <div class="ph ph1 kenburns photo">
+        <img src="imagens/receitadefamilia.jpg" alt="Receita de família da Tia Dina, guardada e passada de geração em geração">
+      </div>
+      <div class="ph ph2 photo">
+        <img src="imagens/lanchonete.jpg" alt="Fachada da Lanchonete da Tia Dina, com o trilho de trem passando bem pertinho do bairro Rio Verde">
+      </div>
+      <span class="stamp" aria-hidden="true">receita de família</span>
+    </div>
+
+    <div class="about-copy">
+      <span class="script">nossa história</span>
+      <h2>Da cozinha da Tia Dina <em>pro bairro inteiro</em></h2>
+      <p>Começou em 2023 com uma cozinha pequena e uma fila de vizinhos na porta, aqui na Avenida Sol Poente. O “lanche da Tia Dina” virou ponto de encontro: café da manhã reforçado, almoço de verdade e lanche da tarde.</p>
+      <p>Hoje o balcão cresceu, mas a regra é a mesma do primeiro dia: salgado frito e assado no dia, arroz com charque no capricho, mingau quentinho e ninguém sai daqui sem provar.</p>
+      <span class="assin">— Tia Dina, fundadora e chefe da cozinha</span>
+      <div class="seals" aria-label="Selos de qualidade da casa">
+        <span class="stamp">feito no dia</span>
+        <span class="stamp">tempero da casa</span>
+        <span class="stamp">receita de família</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPOIMENTOS ═══ -->
+<section id="depoimentos" class="on-cream">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">quem prova, volta</span>
+      <h2>Comandas do povo</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="receipts">
+      <article class="receipt" style="--r:-2deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 001</header>
+        <span class="stars" aria-label="5 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        <blockquote>“A coxinha da Tia Dina é perigosa: sonho com ela toda semana. Massa macia, recheio de verdade — os melhores R$ 5 do Rio Verde.”</blockquote>
+        <footer>Marília C. <small>Rio Verde · cliente desde 2023</small></footer>
+      </article>
+
+      <article class="receipt" style="--r:1.5deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 002</header>
+        <span class="stars" aria-label="5 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        <blockquote>“Peço no zap e chega quentinho. O arroz com charque no tamanho G alimenta a família toda em dia de jogo.”</blockquote>
+        <footer>Diego A. <small>Cidade Nova · pede toda quarta</small></footer>
+      </article>
+
+      <article class="receipt" style="--r:-1deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 003</header>
+        <span class="stars" aria-label="5 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        <blockquote>“Melhor lanchão de Parauapebas, não aceito debate. Cinco reais que valem por uma refeição.”</blockquote>
+        <footer>Léo M. <small>Bairro União · time do lanchão</small></footer>
+      </article>
+
+      <article class="receipt" style="--r:2deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 004</header>
+        <span class="stars" aria-label="4 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></span>
+        <blockquote>“Sábado cedo passo lá pra garantir a maniçoba. É a do Pará de verdade, com folha moída e tudo. Vale chegar antes das 17h!”</blockquote>
+        <footer>Kaio S. <small>Nova Carajás · sábado é sagrado</small></footer>
+      </article>
+
+      <article class="receipt" style="--r:-1.6deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 005</header>
+        <span class="stars" aria-label="5 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        <blockquote>“Levo as crianças no fim de tarde: mingau de milho com canela e salada de fruta fresquinha. Elas amam, e eu sossego.”</blockquote>
+        <footer>Renata &amp; família <small>Beira Rio · fim de tarde é na Tia Dina</small></footer>
+      </article>
+
+      <article class="receipt" style="--r:1.2deg">
+        <header>Lanchonete da Tia Dina ★ cupom de elogio nº 006</header>
+        <span class="stars" aria-label="5 de 5 estrelas"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        <blockquote>“Caldo de carne com cheiro-verde depois da feira é o meu remédio. A Tia Dina cozinha como mãe.”</blockquote>
+        <footer>Dona Zefa <small>Rio Verde · vizinha fundadora da fila</small></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE 2 ═══ -->
+<div class="marquee marquee-mustard" aria-hidden="true">
+  <div class="track">
+    <span>PEÇA NO ZAP ★ CHEGA QUENTINHO ★ FEITO NO DIA ★ BORA DE LANCHE? ★ PEÇA NO ZAP ★ CHEGA QUENTINHO ★ FEITO NO DIA ★ BORA DE LANCHE? ★</span>
+    <span>PEÇA NO ZAP ★ CHEGA QUENTINHO ★ FEITO NO DIA ★ BORA DE LANCHE? ★ PEÇA NO ZAP ★ CHEGA QUENTINHO ★ FEITO NO DIA ★ BORA DE LANCHE? ★</span>
+  </div>
+</div>
+
+<!-- ═══ COMO PEDIR ═══ -->
+<section id="pedidos" class="order">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script" style="color:var(--mustard)">sem complicação</span>
+      <h2 style="color:var(--cream)">Como pedir</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="order-paths">
+      <div class="path path-wa">
+        <span class="num" aria-hidden="true">01</span>
+        <h3>No WhatsApp</h3>
+        <p>Manda um "oi, Tia Dina!" que a gente já responde com a disponibilidade do dia e o tempo de espera. Resposta em minutos no horário da casa.</p>
+        <a class="btn btn-wa" data-wa href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Chamar no zap</a>
+      </div>
+
+      <div class="path">
+        <span class="num" aria-hidden="true">02</span>
+        <h3>Retirada no balcão</h3>
+        <p>Pede no zap com antecedência e passa aqui na esquina da Sol Poente com a Amazonas: seu pedido pronto pra levar, saindo da cozinha na sua mão.</p>
+        <p style="margin-bottom:0"><strong style="color:var(--mustard)">Seg a qui: 8h às 22h · Sábado: 8h às 17h</strong></p>
+      </div>
+
+      <div class="path">
+        <span class="num" aria-hidden="true">03</span>
+        <h3>Entrega da casa</h3>
+        <p>Entregamos num raio de até 6 km com moto própria e bag térmica. Taxa por bairro:</p>
+        <ul>
+          <li><strong>Rio Verde</strong><span>grátis acima de R$ 30</span></li>
+          <li><strong>Cidade Nova · União</strong><span>R$ 5</span></li>
+          <li><strong>Beira Rio · Nova Carajás</strong><span>R$ 7</span></li>
+        </ul>
+        <span class="fees-note">* pedido mínimo R$ 15 · combinamos tudo no zap</span>
+      </div>
+    </div>
+
+    <div class="steps" aria-label="Passo a passo do pedido">
+      <div class="step"><b>1</b><span>escolhe no cardápio</span></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="step"><b>2</b><span>manda no zap</span></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="step"><b>3</b><span>chega quentinho</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LOCAL & HORÁRIOS ═══ -->
+<section id="onde" class="on-cream">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">cola com a gente</span>
+      <h2>Onde &amp; quando</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="loc-grid">
+      <div class="map-card">
+        <!-- mapa ilustrado, feito à mão -->
+        <svg viewBox="0 0 640 440" role="img" aria-label="Mapa ilustrado do Bairro Rio Verde: a lanchonete fica na Avenida Sol Poente, esquina com a Avenida Amazonas">
+          <rect width="640" height="440" fill="#f3e6c9"/>
+          <!-- quarteirões -->
+          <rect x="30"  y="30"  width="330" height="170" fill="#eadbb6" stroke="#2a1a10" stroke-width="2" stroke-dasharray="6 6"/>
+          <rect x="30"  y="300" width="330" height="110" fill="#eadbb6" stroke="#2a1a10" stroke-width="2" stroke-dasharray="6 6"/>
+          <rect x="470" y="30"  width="60"  height="170" fill="#eadbb6" stroke="#2a1a10" stroke-width="2" stroke-dasharray="6 6"/>
+          <rect x="470" y="300" width="60"  height="110" fill="#eadbb6" stroke="#2a1a10" stroke-width="2" stroke-dasharray="6 6"/>
+          <!-- rio -->
+          <path d="M 585 -10 C 560 120, 615 260, 580 450" fill="none" stroke="#a9bfc6" stroke-width="36" opacity=".85"/>
+          <text x="596" y="120" font-family="Caveat, cursive" font-size="26" fill="#5c7680" transform="rotate(80 596 120)">rio verde</text>
+          <!-- ruas -->
+          <rect x="0" y="222" width="640" height="52" fill="#fbf3df"/>
+          <line x1="0" y1="248" x2="640" y2="248" stroke="#2a1a10" stroke-width="3" stroke-dasharray="14 16"/>
+          <rect x="386" y="0" width="52" height="440" fill="#fbf3df"/>
+          <line x1="412" y1="0" x2="412" y2="440" stroke="#2a1a10" stroke-width="3" stroke-dasharray="14 16"/>
+          <text x="40" y="214" font-family="Caveat, cursive" font-size="30" fill="#2a1a10">Avenida Sol Poente →</text>
+          <text x="378" y="418" font-family="Caveat, cursive" font-size="26" fill="#2a1a10" transform="rotate(-90 378 418)">Avenida Amazonas</text>
+          <!-- pin -->
+          <circle class="pulse" cx="412" cy="248" r="20" fill="none" stroke="#e0492c" stroke-width="4"/>
+          <path d="M412 178 c-24 0 -40 17 -40 39 c0 28 40 67 40 67 s40 -39 40 -67 c0 -22 -16 -39 -40 -39z" fill="#e0492c" stroke="#2a1a10" stroke-width="4"/>
+          <circle cx="412" cy="216" r="14" fill="#f4e7cd" stroke="#2a1a10" stroke-width="4"/>
+          <text x="452" y="180" font-family="Caveat, cursive" font-size="32" fill="#b23420" transform="rotate(-6 452 180)">é aqui, ó!</text>
+          <text x="52" y="392" font-family="Caveat, cursive" font-size="26" fill="#5a4030">☀ oeste · pôr do sol garantido</text>
+        </svg>
+      </div>
+
+      <div class="info-card">
+        <h3>Endereço &amp; contato</h3>
+        <address>
+          Avenida Sol Poente, esquina com a Avenida Amazonas<br>
+          Bairro Rio Verde — Parauapebas – Pará
+          <span class="hand">na esquina, não tem erro! 😉</span>
+        </address>
+        <div class="contact-links">
+          <a class="chip wa" data-wa href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">(91) 98041-3076</a>
+          <a class="chip" href="tel:+5591980413076"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/></svg> ligar</a>
+        </div>
+
+        <h3>Horários da casa</h3>
+        <table class="hours" id="hoursTable">
+          <tbody>
+            <tr data-day="1"><th scope="row">Segunda</th><td>8h – 22h</td></tr>
+            <tr data-day="2"><th scope="row">Terça</th><td>8h – 22h</td></tr>
+            <tr data-day="3"><th scope="row">Quarta</th><td>8h – 22h</td></tr>
+            <tr data-day="4"><th scope="row">Quinta</th><td>8h – 22h</td></tr>
+            <tr data-day="5" class="closed"><th scope="row">Sexta</th><td>fechado</td></tr>
+            <tr data-day="6"><th scope="row">Sábado</th><td>8h – 17h</td></tr>
+            <tr data-day="0" class="closed"><th scope="row">Domingo</th><td>fechado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ RODAPÉ ═══ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="logo-name">DA TIA <em>DINA</em></div>
+    <span class="frase">"o lanche que abraça o bairro."</span>
+    <div class="pay" aria-label="Formas de pagamento">
+      <span>Pix</span><span>Dinheiro</span><span>Visa</span><span>Mastercard</span><span>VA/VR na maquininha</span>
+    </div>
+    <small>
+      © 2026 Lanchonete da Tia Dina · Av. Sol Poente, esquina com Av. Amazonas, Bairro Rio Verde, Parauapebas–PA<br>
+      Site feito na chapa, com manteiga e carinho.
+    </small>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP FLUTUANTE ═══ -->
+<a class="wa-float" id="waFloat" data-wa aria-label="Pedir pelo WhatsApp"
+   href="https://wa.me/5591980413076?text=Oi%2C%20Tia%20Dina!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- ═══ VOLTAR AO TOPO ═══ -->
+<button class="back-top" id="backTop" type="button" aria-label="Voltar ao topo">
+  <div class="text">
+    <span>V</span><span>O</span><span>L</span><span>T</span><span>A</span><span>R</span>
+  </div>
+  <div class="clone" aria-hidden="true">
+    <span>V</span><span>O</span><span>L</span><span>T</span><span>A</span><span>R</span>
+  </div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</button>
+
+<script src="lanchonete_da_tia.js"></script>
+</body>
+</html>
