@@ -15,7 +15,7 @@ Site da Lanchonete da Tia Dina — salgados, lanchão, arroz com charque, maniç
 
 ## Como rodar localmente
 
-Basta abrir o `lanchonete_da_tia.html` no navegador — o site é 100% estático, sem dependências.
+Basta abrir o `index.html` no navegador — o site é 100% estático, sem dependências.
 
 Ou, se preferir um servidor local:
 
@@ -29,7 +29,7 @@ e acesse `http://localhost:8000`.
 
 ```
 sitedina/
-├── lanchonete_da_tia.html   # página principal
+├── index.html               # página principal
 ├── lanchonete_da_tia.css    # estilos
 ├── lanchonete_da_tia.js     # lógica (cardápio, horários, animações)
 └── imagens/                 # fotos dos produtos e da lanchonete
